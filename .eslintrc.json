@@ -1,0 +1,34 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard-with-typescript",
+        "plugin:react/jsx-runtime",
+        "prettier"
+    ],
+    "overrides": [],
+    "parserOptions": {
+        "project": ["./tsconfig.json"],
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["simple-import-sort", "import", "react"],
+    "rules": {
+        "simple-import-sort/imports": "warn",
+        "simple-import-sort/exports": "warn",
+        "import/first": "warn",
+        "import/newline-after-import": "warn",
+        "import/no-anonymous-default-export": "off",
+        "import/no-duplicates": "warn",
+        "no-restricted-imports": ["error", { "paths": [".", ".."] }],
+        "@typescript-eslint/explicit-function-return-type": "off"
+    }
+}
